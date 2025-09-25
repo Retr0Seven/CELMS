@@ -5,4 +5,14 @@ homepage: "https://github.com/yourusername/CELMS"
 funding: false
 logo: "screenshots/logo.png"
 license: "MIT"
-topics: ["javascript", "react", "nodejs", "express", "postgresql", "inventory-management", "docker", "bootstrap"]
+topics:
+  [
+    "javascript",
+    "react",
+    "nodejs",
+    "express",
+    "postgresql",
+    "inventory-management",
+    "docker",
+    "bootstrap",
+  ]

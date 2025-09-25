@@ -5,11 +5,7 @@
 [![Issues](https://img.shields.io/github/issues/yourusername/CELMS)](https://github.com/yourusername/CELMS/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourusername/CELMS/blob/main/CONTRIBUTING.md)
 
-
-
 CELMS is a full-stack web application designed to manage equipment loans and reservations in educational environments. It streamlines the process of borrowing technical equipment, managing inventory, and handling maintenance tickets.## Prerequisites
-
-
 
 ## 📋 Features- [Node.js](https://nodejs.org/) (v14 or newer)
 
@@ -31,8 +27,6 @@ CELMS is a full-stack web application designed to manage equipment loans and res
 
 ## 🚀 Tech Stack- `functions_and_seed.sql`: Database functions and seed data
 
-
-
 ### Frontend## Quick Start
 
 - **React**: Frontend UI library
@@ -42,8 +36,6 @@ CELMS is a full-stack web application designed to manage equipment loans and res
 - **Context API**: State management
 
 - **React Router**: Navigation and routingThe easiest way to run the project is to use the provided start script:
-
-
 
 ### Backend```
 
@@ -55,15 +47,11 @@ CELMS is a full-stack web application designed to manage equipment loans and res
 
 - **JWT**: Authentication mechanismThis will start both the API server and client application in development mode.
 
-
-
 ### DevOps### Database Setup
 
 - **Docker**: Containerization
 
 - **Docker Compose**: Multi-container orchestrationBefore running the application for the first time, you should set up the database:
-
-
 
 ## 📸 Screenshots```
 
@@ -97,19 +85,15 @@ If you prefer to set up the components manually:
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v14 or newer)   ```
+- [Node.js](https://nodejs.org/) (v14 or newer) ```
 
-- [PostgreSQL](https://www.postgresql.org/) (or use the included Docker setup)   docker-compose up -d
+- [PostgreSQL](https://www.postgresql.org/) (or use the included Docker setup) docker-compose up -d
 
-- [Docker](https://www.docker.com/) & [Docker Compose](https://docs.docker.com/compose/) (optional)   ```
+- [Docker](https://www.docker.com/) & [Docker Compose](https://docs.docker.com/compose/) (optional) ```
 
+### Database Setup This starts a PostgreSQL database using Docker.
 
-
-### Database Setup   This starts a PostgreSQL database using Docker.
-
-
-
-```bash2. **Install backend dependencies**:
+````bash2. **Install backend dependencies**:
 
 # Start the PostgreSQL database with Docker
 
@@ -125,13 +109,13 @@ Get-Content -Path "CELMS.sql" | docker exec -i $(docker-compose ps -q postgres) 
 
 Get-Content -Path "functions_and_seed.sql" | docker exec -i $(docker-compose ps -q postgres) psql -U postgres -d celms3. **Install frontend dependencies**:
 
-```
+````
 
-   ```
+````
 
 ### Backend Setup   cd celms-client
 
-   npm install
+npm install
 
 ```bash   ```
 
@@ -145,7 +129,7 @@ cd celms-api4. **Start the backend API**:
 
 npm install   cd celms-api
 
-   npm start
+npm start
 
 # Start the server   ```
 
@@ -157,9 +141,9 @@ npm start
 
 ### Frontend Setup5. **Start the frontend application**:
 
-   ```
+````
 
-```bash   cd celms-client
+````bash cd celms-client
 
 # Navigate to the client directory   npm start
 
@@ -177,13 +161,11 @@ npm install## Stopping the Application
 
 npm start
 
-``````
+````
 
 ./stop-celms.ps1
 
 ## 🔑 Usage```
-
-
 
 1. Access the application at: http://localhost:3000This will stop the running Node.js processes and Docker containers.
 
@@ -195,8 +177,6 @@ npm start
 
    - **Student**: student@celms.edu / student123The API uses the following environment variables that can be set in a `.env` file in the `celms-api` directory:
 
-
-
 ## 🔍 Project Structure- `PORT`: API server port (default: 3001)
 
 - `DB_HOST`: PostgreSQL host
@@ -205,27 +185,28 @@ npm start
 
 CELMS/- `DB_NAME`: PostgreSQL database name
 
-├── celms-api/           # Backend API server- `DB_USER`: PostgreSQL username
+├── celms-api/ # Backend API server- `DB_USER`: PostgreSQL username
 
-│   ├── db/              # Database connection and queries- `DB_PASSWORD`: PostgreSQL password
+│ ├── db/ # Database connection and queries- `DB_PASSWORD`: PostgreSQL password
 
-│   ├── middleware/      # Authentication and request handling middleware- `JWT_SECRET`: Secret key for JWT authentication
+│ ├── middleware/ # Authentication and request handling middleware- `JWT_SECRET`: Secret key for JWT authentication
 
-│   └── routes/          # API endpoints
+│ └── routes/ # API endpoints
 
-├── celms-client/        # Frontend React application## License
+├── celms-client/ # Frontend React application## License
 
-│   ├── public/          # Static assets
+│ ├── public/ # Static assets
 
-│   └── src/[MIT License](LICENSE)
+│ └── src/[MIT License](LICENSE)
 
-│       ├── components/  # React components
-│       ├── contexts/    # React context providers
-│       ├── hooks/       # Custom React hooks
-│       ├── pages/       # Page components
-│       └── services/    # API services
-├── CELMS.sql            # Database schema
-└── functions_and_seed.sql  # Database functions and seed data
+│ ├── components/ # React components
+│ ├── contexts/ # React context providers
+│ ├── hooks/ # Custom React hooks
+│ ├── pages/ # Page components
+│ └── services/ # API services
+├── CELMS.sql # Database schema
+└── functions_and_seed.sql # Database functions and seed data
+
 ```
 
 ## ⚙️ Environment Variables
@@ -233,7 +214,9 @@ CELMS/- `DB_NAME`: PostgreSQL database name
 ### Backend (.env)
 
 ```
+
 # Database connection
+
 PGUSER=postgres
 PGPASSWORD=your_password
 PGHOST=localhost
@@ -241,20 +224,25 @@ PGPORT=5432
 PGDATABASE=celms
 
 # JWT configuration
+
 JWT_SECRET=your_secret_key
 JWT_EXPIRES_IN=24h
 
 # Server configuration
+
 PORT=3001
 NODE_ENV=development
+
 ```
 
 ### Frontend (.env)
 
 ```
+
 PORT=3000
 REACT_APP_API_URL=http://localhost:3001
-```
+
+````
 
 ## 🧪 Testing
 
@@ -266,7 +254,7 @@ npm test
 # Run frontend tests
 cd celms-client
 npm test
-```
+````
 
 ## 🔧 Future Improvements
 

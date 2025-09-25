@@ -25,6 +25,7 @@ POST /auth/login
 ```
 
 Request body:
+
 ```json
 {
   "email": "user@example.com",
@@ -33,6 +34,7 @@ Request body:
 ```
 
 Response:
+
 ```json
 {
   "success": true,
@@ -54,6 +56,7 @@ GET /auth/me
 ```
 
 Response:
+
 ```json
 {
   "success": true,
@@ -83,11 +86,13 @@ GET /items
 ```
 
 Query parameters:
+
 - `status`: Filter by status ("available", "in_use", "maintenance", "reserved")
 - `category`: Filter by category ID
 - `search`: Search in name and description
 
 Response:
+
 ```json
 {
   "success": true,
@@ -112,6 +117,7 @@ GET /items/:id
 ```
 
 Response:
+
 ```json
 {
   "success": true,
@@ -136,6 +142,7 @@ POST /items
 ```
 
 Request body:
+
 ```json
 {
   "name": "Laptop Dell XPS 15",
@@ -152,6 +159,7 @@ PUT /items/:id
 ```
 
 Request body:
+
 ```json
 {
   "name": "Laptop Dell XPS 15 (Updated)",
@@ -175,9 +183,11 @@ GET /loans
 ```
 
 Query parameters:
+
 - `status`: Filter by status ("active", "returned", "overdue")
 
 Response:
+
 ```json
 {
   "success": true,
@@ -203,6 +213,7 @@ POST /loans
 ```
 
 Request body:
+
 ```json
 {
   "item_id": 1,
@@ -225,9 +236,11 @@ GET /reservations
 ```
 
 Query parameters:
+
 - `status`: Filter by status ("pending", "approved", "denied", "cancelled", "expired")
 
 Response:
+
 ```json
 {
   "success": true,
@@ -253,6 +266,7 @@ POST /reservations
 ```
 
 Request body:
+
 ```json
 {
   "item_id": 1,
@@ -268,6 +282,7 @@ PATCH /reservations/:id/status
 ```
 
 Request body:
+
 ```json
 {
   "status": "approved",
@@ -284,10 +299,12 @@ GET /tickets
 ```
 
 Query parameters:
+
 - `status`: Filter by status ("open", "in_progress", "resolved", "closed")
 - `assigned_to`: Filter by technician ID
 
 Response:
+
 ```json
 {
   "success": true,
@@ -316,6 +333,7 @@ POST /tickets
 ```
 
 Request body:
+
 ```json
 {
   "item_id": 1,
@@ -330,6 +348,7 @@ PATCH /tickets/:id
 ```
 
 Request body:
+
 ```json
 {
   "status": "in_progress",
@@ -347,6 +366,7 @@ GET /users
 ```
 
 Query parameters:
+
 - `role`: Filter by role ("admin", "staff", "student", "technician")
 
 ### Create User
@@ -356,6 +376,7 @@ POST /users
 ```
 
 Request body:
+
 ```json
 {
   "first_name": "Jane",
@@ -392,6 +413,7 @@ Error responses follow this format:
 ```
 
 Common HTTP status codes:
+
 - 400: Bad Request (invalid input)
 - 401: Unauthorized (authentication required)
 - 403: Forbidden (insufficient permissions)

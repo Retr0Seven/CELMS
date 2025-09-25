@@ -38,7 +38,7 @@ The backend follows a RESTful API design using Express.js:
 │ first_name  │     │ name        │     │ name        │
 │ last_name   │     │ description │     │ description │
 │ email       │     │ category_id │     └─────────────┘
-│ password    │     │ status      │     
+│ password    │     │ status      │
 │ role        │     │ barcode     │     ┌─────────────┐
 └─────────────┘     └─────────────┘     │ Technicians │
       │                   │             ├─────────────┤
