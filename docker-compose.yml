@@ -1,0 +1,20 @@
+# Docker Compose configuration
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: CELMS
+    restart: always
+    environment:
+      POSTGRES_USER: retro
+      POSTGRES_PASSWORD: retro123
+      POSTGRES_DB: celms
+    ports:
+      - "5432:5432"
+    volumes:
+      - celms_data:/var/lib/postgresql/data
+      - ./CELMS.sql:/docker-entrypoint-initdb.d/1-schema.sql
+      - ./functions_and_seed.sql:/docker-entrypoint-initdb.d/2-functions-and-seed.sql
+
+volumes:
+  celms_data:

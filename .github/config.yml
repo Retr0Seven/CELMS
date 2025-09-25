@@ -1,0 +1,8 @@
+name: "📊 CELMS Project"
+description: "Campus Equipment Loan Management System - A full-stack web application for managing equipment loans in educational environments"
+readme: "README.md"
+homepage: "https://github.com/yourusername/CELMS"
+funding: false
+logo: "screenshots/logo.png"
+license: "MIT"
+topics: ["javascript", "react", "nodejs", "express", "postgresql", "inventory-management", "docker", "bootstrap"]
