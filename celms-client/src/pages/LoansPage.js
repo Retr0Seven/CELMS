@@ -10,8 +10,8 @@ const LoansPage = () => {
     const fetchLoans = async () => {
       try {
         setLoading(true);
-        const response = await api.get('/loans');
-        setLoans(response.data);
+        const data = await api.loans.getAll();
+        setLoans(data || []);
         setError(null);
       } catch (err) {
         setError('Failed to fetch loans');

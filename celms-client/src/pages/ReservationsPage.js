@@ -10,8 +10,8 @@ const ReservationsPage = () => {
     const fetchReservations = async () => {
       try {
         setLoading(true);
-        const response = await api.get('/reservations/me');
-        setReservations(response.data);
+        const data = await api.reservations.getAll();
+        setReservations(data || []);
         setError(null);
       } catch (err) {
         setError('Failed to fetch reservations');

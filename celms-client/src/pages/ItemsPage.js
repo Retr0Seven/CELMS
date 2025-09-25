@@ -10,8 +10,8 @@ const ItemsPage = () => {
     const fetchItems = async () => {
       try {
         setLoading(true);
-        const response = await api.get('/items');
-        setItems(response.data);
+        const data = await api.items.getAll();
+        setItems(data);
         setError(null);
       } catch (err) {
         setError('Failed to fetch items');

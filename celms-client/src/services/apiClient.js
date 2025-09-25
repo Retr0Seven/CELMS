@@ -3,7 +3,6 @@
  * A service for making requests to the CELMS API with proper authorization
  */
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
-
 /**
  * Make a request to the API with authorization headers
  * @param {string} endpoint - The API endpoint (e.g., '/items')
