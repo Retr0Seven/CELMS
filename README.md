@@ -171,7 +171,7 @@ npm start
 
 2. Login with the following demo credentials:
 
-   - **Admin**: admin@celms.edu / admin123## Environment Variables
+   - **Admin**: alice.admin@uni.local / Admin123! Environment Variables
 
    - **Staff**: staff@celms.edu / staff123
 
@@ -270,7 +270,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-- Your Name - [GitHub Profile](https://github.com/YourUsername)
+- Mouad Hassari - [GitHub Profile](https://github.com/Retr0Seven)
 
 ## 🙏 Acknowledgements
 
